@@ -11,18 +11,18 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode(of="id")
 public class Product {
-  @Id @GeneratedValue(strategy = GenerationType.UUID)
-  private String id;
+    @Id @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
-  private String name;
+    private String name;
 
-  private Integer price_in_cents;
+    private Integer price_in_cents;
 
-  private Boolean active;
+    private Boolean active;
 
-  public Product(RequestProductDTO requestProductDTO){
-    this.name = requestProductDTO.name();
-    this.price_in_cents = requestProductDTO.price_in_cents();
-    this.active = true;
-  }
+    public Product(RequestProductDTO requestProductDTO){
+        this.name = requestProductDTO.name();
+        this.price_in_cents = requestProductDTO.price_in_cents();
+        this.active = true;
+    }
 }
